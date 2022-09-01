@@ -32,6 +32,7 @@ public class main {
                 break;
 
             case 2:
+                mayorAmenor(miArreglo);
                 break;
 
             case 0:
@@ -55,6 +56,22 @@ public class main {
            for (int i : ArregloVector) {
                System.out.print(i+" ");
            }
+        }
+        public static void mayorAmenor(int[] ArregloVector2){
+            for (int i = 0; i < ArregloVector2.length; i++) {
+                for (int j = 0; j < ArregloVector2.length; j++) {
+                    if (ArregloVector2[i] > ArregloVector2[j]) {
+                        int temp = ArregloVector2[i];
+                        ArregloVector2[i] = ArregloVector2[j];
+                        ArregloVector2[j] = temp;
+                    }
+                }
+            }
+            System.out.println("\ndespues de arreglado...");
+            for (int i : ArregloVector2) {
+                System.out.print(i+" ");
+            }
+
         }
 
 
